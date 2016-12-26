@@ -1,0 +1,24 @@
+version: '2'
+services:
+  api-gateway:
+    container_name: api
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+          src_dir: .
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - "8080:3000"
+      - "9080:5858"
+  db:
+    restart: always
+    image: postgres
+    ports:
+      - "54321:5432"
+    environment:
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=app
+    volumes:
+      - /Users/woraphol/wow_wings_database:/var/lib/postgresql
