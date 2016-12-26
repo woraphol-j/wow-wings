@@ -1,19 +1,25 @@
 version: '2'
 services:
-  api-gateway:
+  api:
     container_name: api
+    image: wow-wings
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-          src_dir: .
     volumes:
       - ./:/usr/src/app
     ports:
       - "8080:3000"
       - "9080:5858"
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=db
+      - DB_USERNAME=app
+      - DB_PASSWORD=app
+    links:
+      - db
   db:
-    restart: always
+    container_name: db
     image: postgres
     ports:
       - "54321:5432"
@@ -21,4 +27,10 @@ services:
       - POSTGRES_USER=app
       - POSTGRES_PASSWORD=app
     volumes:
-      - /Users/woraphol/wow_wings_database:/var/lib/postgresql
+      - /Users/worapholjanekittanpaiboon/wow_wings_database:/var/lib/postgresql
+  redis:
+    image: redis
+    ports:
+      - "6379"
+    links:
+      - db

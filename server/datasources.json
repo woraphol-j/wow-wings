@@ -5,7 +5,7 @@
     "database": "app",
     "username": "${DB_USERNAME}",
     "password": "${DB_PASSWORD}",
-    "name": "app",
+    "name": "db",
     "debug": true,
     "connector": "postgresql"
   }

@@ -1,0 +1,30 @@
+{
+  "name": "Play",
+  "plural": "plays",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "score": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "submitTime": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "player": {
+      "type": "belongsTo",
+      "model": "Player",
+      "foreignKey": "playerId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

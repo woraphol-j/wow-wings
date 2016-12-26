@@ -4,7 +4,7 @@
   "main": "server/server.js",
   "scripts": {
     "lint": "eslint .",
-    "start": "node .",
+    "start": "node --harmony-async-await .",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
@@ -17,7 +17,10 @@
     "strong-error-handler": "^1.0.1",
     "loopback-component-explorer": "^4.0.0",
     "loopback-connector-postgresql": "2.7.0",
-    "loopback": "^3.0.0"
+    "loopback": "^3.0.0",
+    "moment": "2.17.1",
+    "winston": "2.3.0",
+    "lodash": "4.17.3"
   },
   "devDependencies": {
     "eslint": "3.10.2",

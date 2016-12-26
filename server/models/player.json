@@ -1,0 +1,34 @@
+{
+  "name": "Player",
+  "plural": "players",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "playCount": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "highestScore": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "plays": {
+      "type": "hasMany",
+      "model": "Play",
+      "foreignKey": "playerId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
