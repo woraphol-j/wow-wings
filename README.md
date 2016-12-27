@@ -1,7 +1,7 @@
 # WOW-Wings Backend
 ## How to run locally
 1. Install docker for mac by following the instraction in the following page:
-> https://docs.docker.com/docker-for-mac/
+##### https://docs.docker.com/docker-for-mac/
 2. Clone the project
 > git clone https://github.com/woraphol-j/wow-wings
 3. Run the following command in the project directory:
