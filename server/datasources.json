@@ -1,7 +1,7 @@
 {
   "db": {
     "host": "${DB_HOST}",
-    "port": "54321",
+    "port": "5432",
     "database": "app",
     "username": "${DB_USERNAME}",
     "password": "${DB_PASSWORD}",

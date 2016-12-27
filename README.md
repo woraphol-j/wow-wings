@@ -1,5 +1,5 @@
 # WOW-Wings Backend
-## How to run
+## How to run locally
 1. Install docker for mac by following the instraction in the following page:
 > https://docs.docker.com/docker-for-mac/
 2. Clone the project
@@ -20,3 +20,10 @@
 > http://localhost:3000/api/players?&filter[order]=highestScore DESC
  - To retrieve scores for each player
 > http://localhost:3000/api/players/{playerId}/plays
+
+## Build
+1. Follow the steps in AWS ECR to build, tag and push image.
+## Deployment
+1. ecs-cli configure --region ap-southeast-1 --cluster ecs-wow-wings
+2. ecs-cli up --keypair bank_at_home --capability-iam --size 2 --instance-type t2.micro
+3. ecs-cli compose up
