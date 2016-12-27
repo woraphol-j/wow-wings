@@ -13,19 +13,20 @@ git clone https://github.com/woraphol-j/wow-wings
 docker-compose up -d
 ```
 4. Use the following api endpoints to query or post data
- - To post score
- ```
- POST http://localhost:3000/api/plays/submit
- Json input =
- {
-     "name" : "name",
-     "score" : 30
- }
+- To post score
 ```
- - To retrieve top scores
+POST http://localhost:3000/api/plays/submit
+Json input =
+{
+    "name" : "name",
+    "score" : 30
+}
+```
+- To retrieve top scores
 ```
 http://localhost:3000/api/plays?filter[include]=player&filter[fields][playerId]=false&filter[order]=submitTime DESC
 ```
+
 - To retrieve top players
 ```
 http://localhost:3000/api/players?&filter[order]=highestScore DESC
