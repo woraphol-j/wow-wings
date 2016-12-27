@@ -1,0 +1,15 @@
+{
+  "ids": {
+    "Player": 2,
+    "Play": 3
+  },
+  "models": {
+    "Player": {
+      "1": "{\"name\":\"bank\",\"playCount\":2,\"highestScore\":30,\"id\":1}"
+    },
+    "Play": {
+      "1": "{\"score\":20,\"submitTime\":\"2016-12-27T07:13:42.318Z\",\"playerId\":1,\"id\":1}",
+      "2": "{\"score\":30,\"submitTime\":\"2016-12-27T07:13:53.972Z\",\"playerId\":1,\"id\":2}"
+    }
+  }
+}

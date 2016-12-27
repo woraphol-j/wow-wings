@@ -14,11 +14,11 @@
     ]
   },
   "Player": {
-    "dataSource": "db",
+    "dataSource": "memory",
     "public": true
   },
   "Play": {
-    "dataSource": "db",
+    "dataSource": "memory",
     "public": true
   }
 }

@@ -9,9 +9,6 @@ app.start = function () {
     app.emit('started');
     const baseUrl = app.get('url').replace(/\/$/, '');
     console.log('Web server listening at: %s', baseUrl);
-    console.log('db = ', process.env.DB_HOST);
-    console.log('db.username = ', process.env.DB_USERNAME);
-    console.log('db.password = ', process.env.DB_PASSWORD);
     if (app.get('loopback-component-explorer')) {
       const explorerPath = app.get('loopback-component-explorer').mountPath;
       console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
