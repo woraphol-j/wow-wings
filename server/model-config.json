@@ -20,5 +20,9 @@
   "Play": {
     "dataSource": "memory",
     "public": true
+  },
+  "Prediction": {
+    "dataSource": "memory",
+    "public": true
   }
 }

@@ -8,6 +8,7 @@
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
+    "aws-sdk": "2.7.19",
     "compression": "^1.0.3",
     "bluebird": "3.4.7",
     "cors": "^2.5.2",

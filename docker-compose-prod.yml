@@ -1,9 +1,9 @@
 version: '2'
 services:
   api:
-    image: wow-wings
+    image: 252121317593.dkr.ecr.ap-southeast-1.amazonaws.com/wow-wings:latest
     cpu_shares: 100
-    mem_limit: 256000000
+    mem_limit: 128000000
     environment:
       - NODE_ENV=production
       - DB_HOST=db
